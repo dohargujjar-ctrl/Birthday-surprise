@@ -141,8 +141,8 @@ button:active{
 
 <body>
 
-<!-- BACKGROUND MUSIC -->
-<audio id="bgMusic" loop>
+<!-- MUSIC -->
+<audio id="bgMusic" loop preload="auto">
   <source src="Tum%20Prem%20Ho%20%28PenduJatt.dev%29.mp3" type="audio/mpeg">
 </audio>
 
@@ -321,50 +321,79 @@ button:active{
 
 let currentPage = 1;
 
-function nextPage(){
+function startMusic(){
 
   const music = document.getElementById("bgMusic");
 
   if(music.paused){
-    music.volume = 0.6;
-    music.play().catch(()=>{});
-  }
 
-  document.getElementById("page" + currentPage).classList.remove("active");
+    music.volume = 0.6;
+
+    // Skip first 8 seconds
+    music.currentTime = 8;
+
+    music.play().catch(()=>{
+      console.log("Audio playback blocked");
+    });
+
+  }
+}
+
+function nextPage(){
+
+  startMusic();
+
+  document.getElementById("page" + currentPage)
+    .classList.remove("active");
 
   currentPage++;
 
-  document.getElementById("page" + currentPage).classList.add("active");
+  document.getElementById("page" + currentPage)
+    .classList.add("active");
 
   window.scrollTo(0,0);
 }
 
 function finalSurprise(){
+
+  startMusic();
+
   nextPage();
+
   createHearts();
+
   createConfetti();
+
 }
 
 function createHearts(){
+
   for(let i=0;i<25;i++){
+
     let heart=document.createElement("div");
 
     heart.className="heart";
 
-    heart.innerHTML=["❤️","💗","💕","💖","💘"][Math.floor(Math.random()*5)];
+    heart.innerHTML=[
+      "❤️","💗","💕","💖","💘"
+    ][Math.floor(Math.random()*5)];
 
     heart.style.left=Math.random()*100+"vw";
 
-    heart.style.animationDelay=Math.random()*4+"s";
+    heart.style.animationDelay=
+      Math.random()*4+"s";
 
-    heart.style.fontSize=(15+Math.random()*20)+"px";
+    heart.style.fontSize=
+      (15+Math.random()*20)+"px";
 
     document.body.appendChild(heart);
 
     setTimeout(()=>{
       heart.remove();
     },7000);
+
   }
+
 }
 
 function createConfetti(){
@@ -383,28 +412,41 @@ function createConfetti(){
 
     piece.style.top="-30px";
 
-    piece.style.fontSize=(10+Math.random()*20)+"px";
+    piece.style.fontSize=
+      (10+Math.random()*20)+"px";
 
-    piece.style.animation="fall "+(2+Math.random()*3)+"s linear forwards";
+    piece.style.animation=
+      "fall "+(2+Math.random()*3)+"s linear forwards";
 
-    piece.style.animationDelay=Math.random()*1+"s";
+    piece.style.animationDelay=
+      Math.random()*1+"s";
 
     box.appendChild(piece);
 
     setTimeout(()=>{
       piece.remove();
     },5000);
+
   }
+
 }
 
 const style=document.createElement("style");
 
 style.innerHTML=`
+
 @keyframes fall{
+
   to{
-    transform:translateY(110vh) rotate(360deg);
+
+    transform:
+      translateY(110vh)
+      rotate(360deg);
+
     opacity:0;
+
   }
+
 }`;
 
 document.head.appendChild(style);
