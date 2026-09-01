@@ -13,7 +13,7 @@
 }
 
 body{
-  font-family:Arial, sans-serif;
+  font-family:Arial,sans-serif;
   background:linear-gradient(135deg,#ffe6ef,#fff5f8,#ffd6e5);
   color:#5a2438;
   min-height:100vh;
@@ -185,9 +185,7 @@ button:active{
 
     <div class="letter">
 
-      <p>
-      Happy Birthday meri jaan ❤️🎂
-      </p>
+      <p>Happy Birthday meri jaan ❤️🎂</p>
 
       <p>
       Aaj ka din mere liye itna special hai ki tum soch bhi nhi skti kyuki aaj he ek pari ne iss earth per apne pair rkhe te or vo apne sath bohot sari khushiyan leker aayi thi.....or jb se aap meri life me aayi ho meri life ko itna haseen bna diya hai aapne ...
@@ -234,9 +232,7 @@ button:active{
       Bas khush rehna aur kbhi ye mat sochna ki tum aam ho Tum meri jaan ho meri life ho tum ❤️
       </p>
 
-      <p>
-      I love you bby ❤️🫶
-      </p>
+      <p>I love you bby ❤️🫶</p>
 
       <p>
       Happy Birthday, meri pyari bacchi meri princess my wifey 🎀❤️
@@ -329,8 +325,8 @@ function startMusic(){
 
     music.volume = 0.6;
 
-    // Skip first 8 seconds
-    music.currentTime = 8;
+    // Song starts from 16 seconds
+    music.currentTime = 16;
 
     music.play().catch(()=>{
       console.log("Audio playback blocked");
@@ -358,11 +354,17 @@ function finalSurprise(){
 
   startMusic();
 
-  nextPage();
-
   createHearts();
 
   createConfetti();
+
+  document.getElementById("page" + currentPage)
+    .classList.remove("active");
+
+  currentPage++;
+
+  document.getElementById("page" + currentPage)
+    .classList.add("active");
 
 }
 
@@ -434,19 +436,11 @@ function createConfetti(){
 const style=document.createElement("style");
 
 style.innerHTML=`
-
 @keyframes fall{
-
   to{
-
-    transform:
-      translateY(110vh)
-      rotate(360deg);
-
+    transform:translateY(110vh) rotate(360deg);
     opacity:0;
-
   }
-
 }`;
 
 document.head.appendChild(style);
