@@ -316,22 +316,40 @@ button:active{
 <script>
 
 let currentPage = 1;
+let musicStarted = false;
 
 function startMusic(){
 
   const music = document.getElementById("bgMusic");
 
-  if(music.paused){
+  if(musicStarted) return;
 
-    music.volume = 0.6;
+  musicStarted = true;
+  music.volume = 0.6;
 
-    // Song starts from 16 seconds
-    music.currentTime = 16;
+  const startAt16 = () => {
+
+    try{
+      music.currentTime = 16;
+    }catch(e){}
 
     music.play().catch(()=>{
-      console.log("Audio playback blocked");
+      musicStarted = false;
     });
 
+  };
+
+  if(music.readyState >= 1){
+    startAt16();
+  }else{
+
+    music.addEventListener(
+      "loadedmetadata",
+      startAt16,
+      {once:true}
+    );
+
+    music.load();
   }
 }
 
@@ -354,10 +372,6 @@ function finalSurprise(){
 
   startMusic();
 
-  createHearts();
-
-  createConfetti();
-
   document.getElementById("page" + currentPage)
     .classList.remove("active");
 
@@ -365,6 +379,9 @@ function finalSurprise(){
 
   document.getElementById("page" + currentPage)
     .classList.add("active");
+
+  createHearts();
+  createConfetti();
 
 }
 
@@ -393,9 +410,7 @@ function createHearts(){
     setTimeout(()=>{
       heart.remove();
     },7000);
-
   }
-
 }
 
 function createConfetti(){
@@ -428,9 +443,7 @@ function createConfetti(){
     setTimeout(()=>{
       piece.remove();
     },5000);
-
   }
-
 }
 
 const style=document.createElement("style");
