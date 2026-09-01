@@ -141,6 +141,11 @@ button:active{
 
 <body>
 
+<!-- BACKGROUND MUSIC -->
+<audio id="bgMusic" loop>
+  <source src="Tum%20Prem%20Ho%20%28PenduJatt.dev%29.mp3" type="audio/mpeg">
+</audio>
+
 <div id="confetti"></div>
 
 <!-- PAGE 1 -->
@@ -317,9 +322,20 @@ button:active{
 let currentPage = 1;
 
 function nextPage(){
+
+  const music = document.getElementById("bgMusic");
+
+  if(music.paused){
+    music.volume = 0.6;
+    music.play().catch(()=>{});
+  }
+
   document.getElementById("page" + currentPage).classList.remove("active");
+
   currentPage++;
+
   document.getElementById("page" + currentPage).classList.add("active");
+
   window.scrollTo(0,0);
 }
 
@@ -332,11 +348,17 @@ function finalSurprise(){
 function createHearts(){
   for(let i=0;i<25;i++){
     let heart=document.createElement("div");
+
     heart.className="heart";
+
     heart.innerHTML=["❤️","💗","💕","💖","💘"][Math.floor(Math.random()*5)];
+
     heart.style.left=Math.random()*100+"vw";
+
     heart.style.animationDelay=Math.random()*4+"s";
+
     heart.style.fontSize=(15+Math.random()*20)+"px";
+
     document.body.appendChild(heart);
 
     setTimeout(()=>{
@@ -346,17 +368,25 @@ function createHearts(){
 }
 
 function createConfetti(){
+
   const box=document.getElementById("confetti");
 
   for(let i=0;i<80;i++){
+
     let piece=document.createElement("div");
 
     piece.innerHTML="❤️";
+
     piece.style.position="absolute";
+
     piece.style.left=Math.random()*100+"vw";
+
     piece.style.top="-30px";
+
     piece.style.fontSize=(10+Math.random()*20)+"px";
+
     piece.style.animation="fall "+(2+Math.random()*3)+"s linear forwards";
+
     piece.style.animationDelay=Math.random()*1+"s";
 
     box.appendChild(piece);
