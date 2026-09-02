@@ -3,519 +3,458 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My Princess ❤️</title>
+<title>Happy Birthday Meri Jaan ❤️</title>
 
 <style>
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
 
 html,body{
-    margin:0;
-    padding:0;
-    width:100%;
-    min-height:100%;
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
 }
 
 body{
-    font-family:Georgia,"Times New Roman",serif;
-    background:linear-gradient(135deg,#ffdce5,#f7a1b8);
-    color:#57182e;
-    overflow:hidden;
+  font-family:Georgia,serif;
+  background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+  color:#5a1830;
+  overflow:hidden;
 }
 
-/* background hearts */
-.bg-heart{
-    position:fixed;
-    bottom:-50px;
-    font-size:22px;
-    opacity:.8;
-    pointer-events:none;
-    animation:rise 7s linear forwards;
-    z-index:1;
-}
-
-@keyframes rise{
-    0%{
-        transform:translateY(0) rotate(0);
-        opacity:0;
-    }
-    10%{opacity:.8}
-    100%{
-        transform:translateY(-115vh) rotate(360deg);
-        opacity:0;
-    }
-}
-
-/* pages */
 .page{
-    position:absolute;
-    inset:0;
-    display:none;
-    align-items:center;
-    justify-content:center;
-    padding:16px;
-    z-index:2;
+  display:none;
+  width:100%;
+  height:100vh;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
 }
 
 .page.active{
-    display:flex;
+  display:flex;
 }
 
-/* card */
 .card{
-    width:min(94vw,680px);
-    max-height:92vh;
-    overflow-y:auto;
-    padding:28px 22px;
-    background:rgba(255,255,255,.94);
-    border-radius:28px;
-    box-shadow:0 18px 55px rgba(92,20,48,.25);
-    text-align:center;
-    animation:cardIn .65s ease;
-}
-
-@keyframes cardIn{
-    from{
-        opacity:0;
-        transform:translateY(25px) scale(.96);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0) scale(1);
-    }
+  width:92%;
+  max-width:680px;
+  max-height:90vh;
+  overflow-y:auto;
+  background:rgba(255,255,255,.92);
+  border-radius:28px;
+  padding:30px 24px;
+  text-align:center;
+  box-shadow:0 15px 45px rgba(120,20,50,.25);
 }
 
 h1{
-    margin:0 0 18px;
-    color:#d6336c;
-    font-size:30px;
+  color:#d6336c;
+  margin-top:0;
 }
 
 h2{
-    color:#c2255c;
+  color:#c2255c;
 }
 
 p{
-    font-size:18px;
-    line-height:1.8;
-    margin:12px 0;
-}
-
-.big{
-    font-size:21px;
-    line-height:1.9;
+  font-size:18px;
+  line-height:1.8;
 }
 
 .letter{
-    text-align:left;
+  text-align:left;
 }
 
 .letter p{
-    margin-bottom:22px;
+  margin-bottom:20px;
+}
+
+.big{
+  font-size:21px;
+  line-height:1.9;
 }
 
 .shayari{
-    font-size:21px;
-    line-height:2;
-    font-style:italic;
+  font-size:21px;
+  line-height:2;
+  font-style:italic;
 }
 
 button{
-    border:0;
-    outline:0;
-    padding:14px 26px;
-    margin-top:18px;
-    border-radius:30px;
-    background:#d6336c;
-    color:white;
-    font-size:17px;
-    font-family:Georgia,serif;
-    box-shadow:0 8px 22px rgba(214,51,108,.28);
+  border:0;
+  padding:14px 25px;
+  border-radius:30px;
+  background:#d6336c;
+  color:white;
+  font-size:17px;
+  margin-top:15px;
 }
 
-button:active{
-    transform:scale(.95);
+.heart{
+  position:fixed;
+  bottom:-30px;
+  pointer-events:none;
+  animation:float 6s linear forwards;
+  z-index:10;
 }
 
-.small{
-    font-size:15px;
-    opacity:.7;
-}
-
-.crown{
-    font-size:55px;
-    margin-bottom:5px;
-}
-
-.final-heart{
-    font-size:55px;
-    animation:beat 1.1s infinite;
-}
-
-@keyframes beat{
-    0%,100%{transform:scale(1)}
-    50%{transform:scale(1.18)}
-}
-
-/* scrollbar */
-.card::-webkit-scrollbar{
-    width:5px;
-}
-
-.card::-webkit-scrollbar-thumb{
-    background:#e88ba5;
-    border-radius:10px;
+@keyframes float{
+  from{
+    transform:translateY(0) rotate(0deg);
+    opacity:1;
+  }
+  to{
+    transform:translateY(-110vh) rotate(360deg);
+    opacity:0;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- MUSIC -->
-<audio id="music" loop preload="auto">
-    <source src="Tum%20Prem%20Ho%20%28PenduJatt.dev%29.mp3" type="audio/mpeg">
+<audio id="bgMusic" loop preload="auto">
+  <source src="Tum%20Prem%20Ho%20%28PenduJatt.dev%29.mp3" type="audio/mpeg">
 </audio>
 
 
 <!-- PAGE 1 -->
 <section class="page active">
-<div class="card">
+  <div class="card">
 
-<div class="crown">🎀</div>
+    <h1>Hey Nano Don ❤️</h1>
 
-<h1>Hey Nano Don ❤️</h1>
+    <p class="big">
+      Aaj tumhare liye kuch special hai... 🥹❤️
+    </p>
 
-<p class="big">
-Aaj tumhare liye kuch special hai... 🥹
-</p>
+    <p>
+      Ek-ek karke surprise unlock karna.
+    </p>
 
-<p>
-Ek-ek karke surprise unlock karna.
-</p>
+    <button onclick="startSurprise()">
+      Open My Surprise 🎁
+    </button>
 
-<button onclick="begin()">Open My Surprise 🎁</button>
-
-<p class="small">
-Made specially for my Princess ❤️
-</p>
-
-</div>
+  </div>
 </section>
 
 
-<!-- PAGE 2 -->
+<!-- PAGE 2 : ORIGINAL LETTER -->
 <section class="page">
-<div class="card">
+  <div class="card">
 
-<h1>Happy Birthday Meri Jaan ❤️🎂</h1>
+    <h1>Happy Birthday Meri Jaan ❤️🎂</h1>
 
-<div class="letter">
+    <div class="letter">
 
-<p>Happy Birthday meri jaan ❤️🎂</p>
+      <p>
+        Happy Birthday meri jaan ❤️🎂
+      </p>
 
-<p>
-Aaj ka din mere liye itna special hai ki tum soch bhi nhi skti kyuki aaj he ek pari ne iss earth per apne pair rkhe te or vo apne sath bohot sari khushiyan leker aayi thi.....or jb se aap meri life me aayi ho meri life ko itna haseen bna diya hai aapne ...mujheTumse baat karna, tumhara naraz hona, tumhara mujhe manana, tumhari chhoti-chhoti baatein, tumhari smile…sab kuch mujhe bohot aacha lgta hai.....Aur kabhi koi achhi cheez ya kuch bhi hota hai toh automatically man krta hai ki ye sabse pehle tumhe btau❤️.....
-</p>
+      <p>
+        Aaj ka din mere liye itna special hai ki tum soch bhi nhi skti kyuki aaj he ek pari ne iss earth per apne pair rkhe te or vo apne sath bohot sari khushiyan leker aayi thi.....or jb se aap meri life me aayi ho meri life ko itna haseen bna diya hai aapne ...mujheTumse baat karna, tumhara naraz hona, tumhara mujhe manana, tumhari chhoti-chhoti baatein, tumhari smile…sab kuch mujhe bohot aacha lgta hai.....Aur kabhi koi achhi cheez ya kuch bhi hota hai toh automatically man krta hai ki ye sabse pehle tumhe btau❤️.....
+      </p>
 
-<p>
-Mai perfect nahi hu mujhse galtiyan hoti hai kabhi main tumhe samajhne mein late ho jata hu kabhi apni feelings bta nhi pata… lekin ek cheez bilkul sach hai tumhe lekar mere dil mein jo hai na woh fake nahi hai 🥹❤️....
-</p>
+      <p>
+        Mai perfect nahi hu mujhse galtiyan hoti hai kabhi main tumhe samajhne mein late ho jata hu kabhi apni feelings bta nhi pata… lekin ek cheez bilkul sach hai tumhe lekar mere dil mein jo hai na woh fake nahi hai 🥹❤️....
+      </p>
 
-<p>
-Tumhari khushi ke saamne meri bohot si chhoti-chhoti problems khud hi chhoti lgne lgti hai...Tum khush hoti ho toh mujhe andar se ek ajeeb sa sukoon milta hai… aur jab tum udaas hoti ho toh kuch accha he nhi lgta or na he kuch krne ka Dil krta bss ye hota hai ki kisi trha tumhe kush ker du🫶🏻❤️.....
-</p>
+      <p>
+        Tumhari khushi ke saamne meri bohot si chhoti-chhoti problems khud hi chhoti lgne lgti hai...Tum khush hoti ho toh mujhe andar se ek ajeeb sa sukoon milta hai… aur jab tum udaas hoti ho toh kuch accha he nhi lgta or na he kuch krne ka Dil krta bss ye hota hai ki kisi trha tumhe kush ker du🫶🏻❤️.....
+      </p>
 
-<p>
-tum toh yaar meri life ho tum meri vo jgah ho jha mere dil ko sukoon milta hai ❤️...Mai prarthna krta hu ki zindagi tumhe vo sab de jo tumne kabhi chup-chaap maanga hai tumhari aankhon mein aansu aaye bhi toh sirf khushi ke… tumhare chehre ki ye smile kabhi kam na ho ❤️✨....
-</p>
+      <p>
+        tum toh yaar meri life ho tum meri vo jgah ho jha mere dil ko sukoon milta hai ❤️...Mai prarthna krta hu ki zindagi tumhe vo sab de jo tumne kabhi chup-chaap maanga hai tumhari aankhon mein aansu aaye bhi toh sirf khushi ke… tumhare chehre ki ye smile kabhi kam na ho ❤️✨....
+      </p>
 
-<p>
-Aur agar kabhi zindagi tumhe kisi mod par rok de na… toh bas itna yaad rakhna ki tumhara jaggi hai tumhare sath jo tumhari ek smile ke liye bhi poori duniya se lad sakta hai 🥺❤️.....
-</p>
+      <p>
+        Aur agar kabhi zindagi tumhe kisi mod par rok de na… toh bas itna yaad rakhna ki tumhara jaggi hai tumhare sath jo tumhari ek smile ke liye bhi poori duniya se lad sakta hai 🥺❤️.....
+      </p>
 
-<p>
-Aaj tum ek saal aur bdi ho gyi…
-lekin mere liye tum meri life me age k sath nhi mere Dil meri rooh k sath judi ho or tum hmesha meri bacchi meri princess 👑 rho gi🥹🫶.....
-</p>
+      <p>
+        Aaj tum ek saal aur bdi ho gyi… lekin mere liye tum meri life me age k sath nhi mere Dil meri rooh k sath judi ho or tum hmesha meri bacchi meri princess 👑 rho gi🥹🫶.....
+      </p>
 
-<p>
-Bas khush rehna
-aur kbhi ye mat sochna ki tum aam ho Tum meri jaan ho meri life ho tum ❤️...I love you bby ❤️🫶 Happy Birthday, meri pyari bacchi meri princess my wifey 🎀❤️
-</p>
+      <p>
+        Bas khush rehna aur kbhi ye mat sochna ki tum aam ho Tum meri jaan ho meri life ho tum ❤️...I love you bby ❤️🫶 Happy Birthday, meri pyari bacchi meri princess my wifey 🎀❤️
+      </p>
 
-</div>
+    </div>
 
-<button onclick="next()">Next Surprise ❤️</button>
+    <button onclick="nextPage()">Next Surprise ❤️</button>
 
-</div>
+  </div>
 </section>
 
 
 <!-- PAGE 3 -->
 <section class="page">
-<div class="card">
+  <div class="card">
 
-<h1>Meri Jaan... 🥹❤️</h1>
+    <h1>Meri Jaan... 🥹❤️</h1>
 
-<p class="big">
-Tumhari smile meri favourite cheez hai.
-</p>
+    <p class="big">
+      Tumhari smile meri favourite cheez hai.
+    </p>
 
-<p>
-Tum khush hoti ho na toh pata nhi kyun mera mood bhi automatically accha ho jata hai. ❤️
-</p>
+    <p>
+      Tum khush hoti ho na toh pata nhi kyun mera mood bhi automatically
+      accha ho jata hai. ❤️
+    </p>
 
-<p>
-Tum mere liye sirf ek person nahi ho...
-tum meri life ka woh part ho jise main kabhi khona nahi chahta. 🫶🏻
-</p>
+    <p>
+      Tum mere liye sirf ek person nahi ho...
+      tum meri life ka woh part ho jise main kabhi khona nahi chahta. 🫶🏻
+    </p>
 
-<button onclick="next()">Next ❤️</button>
+    <button onclick="nextPage()">Next ❤️</button>
 
-</div>
+  </div>
 </section>
 
 
 <!-- PAGE 4 -->
 <section class="page">
-<div class="card">
+  <div class="card">
 
-<h1>Meri Favourite Cheezein ❤️</h1>
+    <h1>Meri Favourite Cheezein ❤️</h1>
 
-<p>✨ Tumhari smile</p>
-<p>🥹 Tumhara mujhe manana</p>
-<p>❤️ Tumhari chhoti-chhoti baatein</p>
-<p>🫶🏻 Tumhara care karna</p>
-<p>🎀 Tumhara cute sa gussa</p>
+    <p>✨ Tumhari smile</p>
+    <p>🥹 Tumhara mujhe manana</p>
+    <p>❤️ Tumhari chhoti-chhoti baatein</p>
+    <p>🫶🏻 Tumhara care karna</p>
+    <p>🎀 Tumhara cute sa gussa</p>
 
-<p class="big">
-Aur sabse zyada... <b>TUM</b> 👑
-</p>
+    <p class="big">
+      Aur sabse zyada... <b>TUM</b> 👑
+    </p>
 
-<button onclick="next()">Aur ek surprise 🎁</button>
+    <button onclick="nextPage()">Aur ek surprise 🎁</button>
 
-</div>
+  </div>
 </section>
 
 
 <!-- PAGE 5 -->
 <section class="page">
-<div class="card">
+  <div class="card">
 
-<h1>Ek Promise 🫶🏻</h1>
+    <h1>Ek Promise 🫶🏻</h1>
 
-<p class="big">
-Chahe life mein kitne bhi ups and downs aaye,
-main hamesha tumhari smile dekhna chahta hu. ❤️
-</p>
+    <p class="big">
+      Chahe life mein kitne bhi ups and downs aaye,
+      main hamesha tumhari smile dekhna chahta hu. ❤️
+    </p>
 
-<p class="big">
-Aur jab bhi tumhe lage ki sab kuch against hai,
-bas yaad rakhna...
-</p>
+    <p class="big">
+      Aur jab bhi tumhe lage ki sab kuch against hai,
+      bas yaad rakhna...
+    </p>
 
-<p class="big">
-<b>Tumhara Jaggi tumhare saath hai. 🥺❤️</b>
-</p>
+    <p class="big">
+      <b>Tumhara Jaggi tumhare saath hai. 🥺❤️</b>
+    </p>
 
-<button onclick="next()">Next Surprise ✨</button>
+    <button onclick="nextPage()">Next Surprise ✨</button>
 
-</div>
+  </div>
 </section>
 
 
 <!-- PAGE 6 -->
 <section class="page">
-<div class="card">
+  <div class="card">
 
-<h1>Agar Main Ek Cheez Maang Sakta... ❤️</h1>
+    <h1>Agar Main Ek Cheez Maang Sakta... ❤️</h1>
 
-<p class="big">
-Agar main zindagi se ek cheez maang sakta,
-toh main bas ye maangta ki tum hamesha khush raho.
-</p>
+    <p class="big">
+      Agar main zindagi se ek cheez maang sakta,
+      toh main bas ye maangta ki tum hamesha khush raho.
+    </p>
 
-<p>
-Tumhare chehre ki smile kabhi kam na ho
-aur tumhari aankhon mein aansu aaye bhi
-toh sirf khushi ke. 🥹❤️
-</p>
+    <p>
+      Tumhare chehre ki smile kabhi kam na ho
+      aur tumhari aankhon mein aansu aaye bhi
+      toh sirf khushi ke. 🥹❤️
+    </p>
 
-<button onclick="next()">Next ❤️</button>
+    <button onclick="nextPage()">Next ❤️</button>
 
-</div>
+  </div>
 </section>
 
 
 <!-- PAGE 7 -->
 <section class="page">
-<div class="card">
+  <div class="card">
 
-<h1>Ek Chhoti Si Baat... 🥺</h1>
+    <h1>Ek Chhoti Si Baat... 🥺</h1>
 
-<p class="big">
-Pata hai meri favourite feeling kya hai?
-</p>
+    <p class="big">
+      Pata hai meri favourite feeling kya hai?
+    </p>
 
-<p>
-Jab tum mujhse baat karti ho,
-jab tum mujhe apni chhoti-chhoti baatein batati ho...
-tab mujhe lagta hai ki main duniya ka sabse lucky insaan hu. ❤️
-</p>
+    <p>
+      Jab tum mujhse baat karti ho,
+      jab tum mujhe apni chhoti-chhoti baatein batati ho...
+      tab mujhe lagta hai ki main duniya ka sabse lucky insaan hu. ❤️
+    </p>
 
-<p>
-Tumhare saath normal si conversation bhi
-mere liye special ban jaati hai. 🫶🏻
-</p>
+    <p>
+      Tumhare saath normal si conversation bhi
+      mere liye special ban jaati hai. 🫶🏻
+    </p>
 
-<button onclick="next()">Aage Chalo 🎀</button>
+    <button onclick="nextPage()">Aage Chalo 🎀</button>
 
-</div>
+  </div>
 </section>
 
 
 <!-- PAGE 8 -->
 <section class="page">
-<div class="card">
+  <div class="card">
 
-<h1>Ek Aur Secret... 🤫❤️</h1>
+    <h1>Ek Secret... 🤫❤️</h1>
 
-<p class="big">
-Tumhe shayad pata bhi nahi...
-</p>
+    <p class="big">
+      Tumhe shayad pata bhi nahi...
+    </p>
 
-<p>
-Lekin tum meri daily life ka woh hissa ban chuki ho
-jiske bina din thoda incomplete sa lagta hai. 🥹
-</p>
+    <p>
+      Lekin tum meri daily life ka woh hissa ban chuki ho
+      jiske bina din thoda incomplete sa lagta hai. 🥹
+    </p>
 
-<p>
-Tumhari ek chhoti si baat bhi
-mere face par smile la sakti hai. ❤️
-</p>
+    <p>
+      Tumhari ek chhoti si baat bhi
+      mere face par smile la sakti hai. ❤️
+    </p>
 
-<button onclick="next()">Secret Ke Baad... ✨</button>
+    <button onclick="nextPage()">Next Surprise ✨</button>
 
-</div>
+  </div>
 </section>
 
 
-<!-- PAGE 9 -->
+<!-- PAGE 9 : SHAYARI -->
 <section class="page">
-<div class="card">
+  <div class="card">
 
-<h1>Sirf Tumhare Liye... 🌙❤️</h1>
+    <h1>Sirf Tumhare Liye... 🌙❤️</h1>
 
-<p class="shayari">
-Tum ho toh sab kuch khaas lagta hai,<br>
-tumhare bina sab adhura sa lagta hai... ❤️<br><br>
+    <p class="shayari">
+      Tum ho toh sab kuch khaas lagta hai,<br>
+      tumhare bina sab adhura sa lagta hai... ❤️<br><br>
 
-Tumhari ek smile ke liye,<br>
-mera dil hazaar baar dhadak sakta hai... 🥹🫶🏻<br><br>
+      Tumhari ek smile ke liye,<br>
+      mera dil hazaar baar dhadak sakta hai... 🥹🫶🏻<br><br>
 
-Bas yunhi mere saath rehna,<br>
-kyuki tumse hi toh meri duniya haseen lagti hai. 🎀❤️
-</p>
+      Bas yunhi mere saath rehna,<br>
+      kyuki tumse hi toh meri duniya haseen lagti hai. 🎀❤️
+    </p>
 
-<button onclick="next()">Next Surprise ✨</button>
+    <button onclick="nextPage()">Next Surprise ✨</button>
 
-</div>
+  </div>
 </section>
 
 
 <!-- PAGE 10 -->
 <section class="page">
-<div class="card">
+  <div class="card">
 
-<h1>My Princess 👑</h1>
+    <h1>My Princess 👑</h1>
 
-<p class="big">
-Aaj tumhara birthday hai,
-lekin mere liye tum har din special ho. ❤️
-</p>
+    <p class="big">
+      Aaj tumhara birthday hai,
+      lekin mere liye tum har din special ho. ❤️
+    </p>
 
-<p>
-Tum meri bacchi ho,<br>
-meri princess ho,<br>
-meri jaan ho. 🎀
-</p>
+    <p>
+      Tum meri bacchi ho,<br>
+      meri princess ho,<br>
+      meri jaan ho. 🎀
+    </p>
 
-<p>
-Aur mere liye tum hamesha meri cute si princess rahogi. 🥹❤️
-</p>
+    <p>
+      Aur mere liye tum hamesha meri cute si princess rahogi. 🥹❤️
+    </p>
 
-<button onclick="next()">One More ❤️</button>
+    <button onclick="nextPage()">One More ❤️</button>
 
-</div>
+  </div>
 </section>
 
 
 <!-- PAGE 11 -->
 <section class="page">
-<div class="card">
+  <div class="card">
 
-<h1>I Love You Bby ❤️🫶</h1>
+    <h1>I Love You Bby ❤️🫶</h1>
 
-<p class="big">
-Shayad main har baar words mein explain nahi kar pata...
-</p>
+    <p class="big">
+      Shayad main har baar words mein explain nahi kar pata...
+    </p>
 
-<p>
-Lekin mere dil mein tumhare liye jo feelings hain,
-woh mere liye bohot real hain. ❤️
-</p>
+    <p>
+      Lekin mere dil mein tumhare liye jo feelings hain,
+      woh mere liye bohot real hain. ❤️
+    </p>
 
-<p class="big">
-Tum meri jaan ho.<br>
-Tum meri life ho.<br>
-Tum meri princess ho. 👑
-</p>
+    <p class="big">
+      Tum meri jaan ho.<br>
+      Tum meri life ho.<br>
+      Tum meri princess ho. 👑
+    </p>
 
-<button onclick="next()">Final Surprise 🥹</button>
+    <button onclick="nextPage()">Final Surprise 🥹</button>
 
-</div>
+  </div>
 </section>
 
 
 <!-- FINAL PAGE -->
 <section class="page">
-<div class="card">
+  <div class="card">
 
-<div class="final-heart">❤️</div>
+    <h1>My Princess 👑</h1>
 
-<h1>My Princess 👑</h1>
+    <h2>Nancy ❤️</h2>
 
-<h2>Nancy ❤️</h2>
+    <p class="big">
+      Tum meri life ka bohot special part ho. 🥹❤️
+    </p>
 
-<p class="big">
-Tum meri life ka bohot special part ho. 🥹❤️
-</p>
+    <p class="big">
+      Aaj ka din sirf tumhara hai.
+    </p>
 
-<p class="big">
-Aaj ka din sirf tumhara hai.
-</p>
+    <p class="big">
+      Hamesha khush rehna,<br>
+      hamesha smile karna. 🫶🏻
+    </p>
 
-<p class="big">
-Hamesha khush rehna,<br>
-hamesha smile karna. 🫶🏻
-</p>
+    <h2>
+      Happy Birthday Meri Jaan ❤️🎂
+    </h2>
 
-<h2>
-Happy Birthday Meri Jaan ❤️🎂
-</h2>
+    <h2>
+      I Love You Bby ❤️
+    </h2>
 
-<h2>
-I Love You Bby ❤️
-</h2>
+    <p class="big">
+      🎀 My Princess • My Wifey • My Jaan 🎀
+    </p>
 
-<p class="big">
-🎀 My Princess • My Wifey • My Jaan 🎀
-</p>
+    <p>
+      Forever & Always ❤️
+    </p>
 
-<p>
-Forever & Always ❤️
-</p>
-
-</div>
+  </div>
 </section>
 
 
@@ -523,103 +462,76 @@ Forever & Always ❤️
 
 var currentPage = 0;
 var pages = document.querySelectorAll(".page");
-var music = document.getElementById("music");
+var music = document.getElementById("bgMusic");
 
-function showPage(number){
+function startSurprise(){
 
-    if(number < 0 || number >= pages.length){
-        return;
-    }
+  if(music){
+    music.play().catch(function(){});
+  }
 
-    for(var i=0;i<pages.length;i++){
-        pages[i].classList.remove("active");
-    }
+  try{
+    music.currentTime = 16;
+  }catch(e){}
 
-    pages[number].classList.add("active");
-    currentPage = number;
+  createHearts();
+
+  currentPage = 1;
+  showPage();
 }
 
-function begin(){
+function nextPage(){
 
-    /* Mobile browsers allow music after button tap */
-    if(music){
-        music.play().catch(function(){});
-    }
+  if(currentPage < pages.length - 1){
+
+    currentPage++;
+
+    showPage();
 
     createHearts();
-
-    showPage(1);
+  }
 }
 
-function next(){
+function showPage(){
 
-    if(currentPage < pages.length - 1){
+  for(var i = 0; i < pages.length; i++){
+    pages[i].classList.remove("active");
+  }
 
-        currentPage = currentPage + 1;
-
-        showPage(currentPage);
-
-        createHearts();
-    }
-
+  pages[currentPage].classList.add("active");
 }
 
 function createHearts(){
 
-    var emojis = [
-        "❤️",
-        "💕",
-        "💖",
-        "💗",
-        "🎀",
-        "✨",
-        "🫶🏻"
-    ];
+  var emojis = ["❤️","💕","💖","💗","🫶🏻","🎀","✨"];
 
-    for(var i=0;i<9;i++){
+  for(var i = 0; i < 10; i++){
 
-        var heart = document.createElement("div");
+    var heart = document.createElement("div");
 
-        heart.className = "bg-heart";
+    heart.className = "heart";
 
-        heart.innerHTML =
-            emojis[Math.floor(Math.random()*emojis.length)];
+    heart.innerHTML =
+      emojis[Math.floor(Math.random() * emojis.length)];
 
-        heart.style.left =
-            Math.floor(Math.random()*100) + "vw";
+    heart.style.left =
+      Math.random() * 100 + "vw";
 
-        heart.style.fontSize =
-            (18 + Math.floor(Math.random()*22)) + "px";
+    heart.style.fontSize =
+      (18 + Math.random() * 25) + "px";
 
-        heart.style.animationDuration =
-            (5 + Math.floor(Math.random()*4)) + "s";
+    heart.style.animationDuration =
+      (4 + Math.random() * 3) + "s";
 
-        document.body.appendChild(heart);
+    document.body.appendChild(heart);
 
-        setTimeout(function(h){
-
-            return function(){
-
-                if(h && h.parentNode){
-                    h.parentNode.removeChild(h);
-                }
-
-            };
-
-        }(heart),9000);
-    }
+    setTimeout(function(){
+      if(heart.parentNode){
+        heart.parentNode.removeChild(heart);
+      }
+    },7000);
+  }
 }
-
-/* small background heart effect */
-setInterval(function(){
-
-    if(document.hidden){
-        return;
-    }
-
-    createHearts();
-
-},9000);
 
 </script>
 
