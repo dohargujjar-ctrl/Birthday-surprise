@@ -1,3 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Nano Don ❤️</title>
+
+<style>
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:linear-gradient(135deg,#ff758c,#ff7eb3,#ffc3a0);
+  min-height:100vh;
+  color:white;
+  overflow-x:hidden;
+}
+
+.page{
+  min-height:100vh;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:25px;
+  text-align:center;
+}
+
+.page.active{
+  display:flex;
+}
+
+.card{
+  width:100%;
+  max-width:600px;
+  padding:35px 25px;
+  border-radius:30px;
+  background:rgba(255,255,255,0.18);
+  backdrop-filter:blur(12px);
+  box-shadow:0 10px 40px rgba(0,0,0,0.2);
+}
+
+h1{
+  font-size:38px;
+  margin-bottom:15px;
+}
+
+h2{
+  font-size:28px;
+}
+
+p{
+  font-size:18px;
+  line-height:1.7;
+}
+
+button{
+  border:none;
+  padding:15px 28px;
+  border-radius:30px;
+  background:white;
+  color:#ff4f81;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
+  margin-top:20px;
+  box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+button:active{
+  transform:scale(.95);
+}
+
+.heart{
+  position:fixed;
+  bottom:-40px;
+  animation:floatUp 7s linear forwards;
+  pointer-events:none;
+  z-index:10;
+}
+
+@keyframes floatUp{
+  from{
+    transform:translateY(0);
+    opacity:1;
+  }
+  to{
+    transform:translateY(-110vh);
+    opacity:0;
+  }
+}
+
+#confetti{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:20;
+  overflow:hidden;
+}
+
+.confettiPiece{
+  position:absolute;
+  top:-30px;
+  animation:fall linear forwards;
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(110vh) rotate(360deg);
+    opacity:0;
+  }
+}
+
+.big{
+  font-size:55px;
+}
+
+.small{
+  opacity:.9;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- MUSIC -->
+<audio id="bgMusic" loop preload="auto">
+  <source src="Tum%20Prem%20Ho%20%28PenduJatt.dev%29.mp3" type="audio/mpeg">
+</audio>
+
+<div id="confetti"></div>
+
+
+<!-- PAGE 1 -->
+<section class="page active" id="page1">
+  <div class="card">
+
+    <div class="big">🎁</div>
+
+    <h1>Hey Nano Don ❤️</h1>
+
+    <p>
+      Aaj tumhare liye kuch special hai...
+      <br>
+      Lekin sab kuch ek saath nahi milega 😌
+    </p>
+
+    <p class="small">
+      Ek-ek karke surprise unlock karna hai ❤️
+    </p>
+
+    <button onclick="nextPage()">
+      Open My Surprise 💝
+    </button>
+
+  </div>
+</section>
+
+
+<!-- PAGE 2 -->
+<section class="page" id="page2">
+  <div class="card">
+
+    <div class="big">🎂</div>
+
+    <h1>Happy Birthday ❤️</h1>
+
+    <h2>Meri Nano Don 👑</h2>
+
+    <p>
+      Happy Birthday meri jaan ❤️
+      <br><br>
+      Tum meri life ka woh beautiful part ho
+      jiske bina sab kuch thoda incomplete sa lagta hai.
+    </p>
+
+    <button onclick="nextPage()">
+      Next Surprise 💕
+    </button>
+
+  </div>
+</section>
+
+
+<!-- PAGE 3 -->
+<section class="page" id="page3">
+  <div class="card">
+
+    <div class="big">💌</div>
+
+    <h1>Mera Letter</h1>
+
+    <p>
+      Pata nahi main words mein sab kuch properly
+      explain kar paunga ya nahi...
+      <br><br>
+
+      But ek baat hamesha yaad rakhna —
+      tum mere liye bohot special ho.
+      <br><br>
+
+      Tumhari smile mujhe genuinely happy karti hai,
+      tumhari care mujhe special feel karati hai,
+      aur tumhara hona mere liye bohot matter karta hai.
+      <br><br>
+
+      Bas aise hi hamesha mere saath rehna. ❤️
+    </p>
+
+    <button onclick="nextPage()">
+      Aur Dekho 💗
+    </button>
+
+  </div>
+</section>
+
+
+<!-- PAGE 4 -->
+<section class="page" id="page4">
+  <div class="card">
+
+    <div class="big">🥹❤️</div>
+
+    <h1>Meri Favourite Cheezein</h1>
+
+    <p>
+      Tumhari smile ❤️
+      <br>
+      Tumhara cute sa gussa 😤💕
+      <br>
+      Tumhari baatein 🥹
+      <br>
+      Tumhara care karna 💗
+      <br>
+      Aur sabse zyada...
+      <br><br>
+
+      <b>TUM. ❤️</b>
+    </p>
+
+    <button onclick="nextPage()">
+      Ek Aur Surprise 😌
+    </button>
+
+  </div>
+</section>
+
+
+<!-- PAGE 5 -->
+<section class="page" id="page5">
+  <div class="card">
+
+    <div class="big">🤞❤️</div>
+
+    <h1>Ek Promise</h1>
+
+    <p>
+      Main promise karta hoon...
+      <br><br>
+
+      Chahe situation kaisi bhi ho,
+      main tumhari respect hamesha karunga.
+      <br><br>
+
+      Tumhari happiness mere liye important rahegi.
+      <br><br>
+
+      Aur jab bhi tumhe meri zarurat hogi,
+      main tumhare saath khada rahunga. ❤️
+    </p>
+
+    <button onclick="nextPage()">
+      Last Se Pehle 💕
+    </button>
+
+  </div>
+</section>
+
+
+<!-- PAGE 6 -->
+<section class="page" id="page6">
+  <div class="card">
+
+    <div class="big">🥺💖</div>
+
+    <h1>Agar Main Ek Cheez Maang Sakta...</h1>
+
+    <p>
+      Agar main birthday par tumse
+      sirf ek cheez maang sakta...
+      <br><br>
+
+      Toh main kuch expensive nahi maangta.
+      <br><br>
+
+      Bas tumhari smile,
+      tumhara trust,
+      aur thoda sa hamesha wala saath. ❤️
+    </p>
+
+    <button onclick="finalSurprise()">
+      FINAL SURPRISE 🎁
+    </button>
+
+  </div>
+</section>
+
+
+<!-- PAGE 7 -->
+<section class="page" id="page7">
+  <div class="card">
+
+    <div class="big">👑❤️</div>
+
+    <h1>My Princess</h1>
+
+    <h2>Nancy ❤️</h2>
+
+    <p>
+      Meri Nano Don,
+      meri Princess,
+      meri Wifey... ❤️
+      <br><br>
+
+      Happy Birthday once again! 🎂
+      <br><br>
+
+      I hope tumhari life hamesha
+      happiness, smiles aur love se bhari rahe.
+      <br><br>
+
+      <b>
+        You are very, very special to me. ❤️
+      </b>
+      <br><br>
+
+      Once again...
+      <br>
+      <b>HAPPY BIRTHDAY MERI JAAN 🎂❤️</b>
+    </p>
+
+  </div>
+</section>
+
+
 <script>
 
 let currentPage = 1;
@@ -10,124 +360,151 @@ function startMusic(){
   if(musicStarted) return;
 
   musicStarted = true;
+
   music.volume = 0.6;
 
-  // Pehle audio ko load/play hone do
-  music.play().then(() => {
+  music.play()
+    .then(function(){
 
-    // Playback start hote hi 16 seconds par jump
-    music.currentTime = 16;
+      try{
+        music.currentTime = 16;
+      }catch(e){}
 
-  }).catch(() => {
+    })
+    .catch(function(){
 
-    // Agar browser ne pehli baar play block kiya
-    musicStarted = false;
+      musicStarted = false;
 
-  });
+    });
 }
+
 
 function nextPage(){
 
   startMusic();
 
-  document.getElementById("page" + currentPage)
-    .classList.remove("active");
+  const oldPage =
+    document.getElementById("page" + currentPage);
+
+  if(oldPage){
+    oldPage.classList.remove("active");
+  }
 
   currentPage++;
 
-  document.getElementById("page" + currentPage)
-    .classList.add("active");
+  const newPage =
+    document.getElementById("page" + currentPage);
+
+  if(newPage){
+    newPage.classList.add("active");
+  }
 
   window.scrollTo(0,0);
 }
+
 
 function finalSurprise(){
 
   startMusic();
 
-  document.getElementById("page" + currentPage)
-    .classList.remove("active");
+  const oldPage =
+    document.getElementById("page" + currentPage);
+
+  if(oldPage){
+    oldPage.classList.remove("active");
+  }
 
   currentPage++;
 
-  document.getElementById("page" + currentPage)
-    .classList.add("active");
+  const newPage =
+    document.getElementById("page" + currentPage);
+
+  if(newPage){
+    newPage.classList.add("active");
+  }
 
   createHearts();
   createConfetti();
+
+  window.scrollTo(0,0);
 }
+
 
 function createHearts(){
 
   for(let i=0;i<25;i++){
 
-    let heart=document.createElement("div");
+    const heart =
+      document.createElement("div");
 
     heart.className="heart";
 
-    heart.innerHTML=[
-      "❤️","💗","💕","💖","💘"
-    ][Math.floor(Math.random()*5)];
+    const hearts=[
+      "❤️",
+      "💗",
+      "💕",
+      "💖",
+      "💘"
+    ];
 
-    heart.style.left=Math.random()*100+"vw";
+    heart.innerHTML =
+      hearts[Math.floor(Math.random()*hearts.length)];
 
-    heart.style.animationDelay=
+    heart.style.left =
+      Math.random()*100+"vw";
+
+    heart.style.animationDelay =
       Math.random()*4+"s";
 
-    heart.style.fontSize=
+    heart.style.fontSize =
       (15+Math.random()*20)+"px";
 
     document.body.appendChild(heart);
 
-    setTimeout(()=>{
+    setTimeout(function(){
       heart.remove();
     },7000);
+
   }
 }
 
+
 function createConfetti(){
 
-  const box=document.getElementById("confetti");
+  const box =
+    document.getElementById("confetti");
 
   for(let i=0;i<80;i++){
 
-    let piece=document.createElement("div");
+    const piece =
+      document.createElement("div");
+
+    piece.className="confettiPiece";
 
     piece.innerHTML="❤️";
 
-    piece.style.position="absolute";
-    piece.style.left=Math.random()*100+"vw";
-    piece.style.top="-30px";
+    piece.style.left =
+      Math.random()*100+"vw";
 
-    piece.style.fontSize=
+    piece.style.fontSize =
       (10+Math.random()*20)+"px";
 
-    piece.style.animation=
-      "fall "+(2+Math.random()*3)+"s linear forwards";
+    piece.style.animationDuration =
+      (2+Math.random()*3)+"s";
 
-    piece.style.animationDelay=
+    piece.style.animationDelay =
       Math.random()*1+"s";
 
     box.appendChild(piece);
 
-    setTimeout(()=>{
+    setTimeout(function(){
       piece.remove();
     },5000);
+
   }
 }
 
-const style=document.createElement("style");
-
-style.innerHTML=`
-@keyframes fall{
-  to{
-    transform:translateY(110vh) rotate(360deg);
-    opacity:0;
-  }
-}`;
-
-document.head.appendChild(style);
-
-createHearts();
-
 </script>
+
+</body>
+            </html>
