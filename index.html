@@ -24,12 +24,10 @@ body{
   display:none;
   width:100%;
   height:100vh;
-  min-height:100vh;
   padding:25px 18px;
   align-items:center;
   justify-content:center;
   text-align:center;
-  position:relative;
   overflow-y:auto;
 }
 
@@ -40,13 +38,11 @@ body{
 .box{
   width:100%;
   max-width:700px;
-  background:rgba(255,255,255,.88);
+  background:rgba(255,255,255,.9);
   border-radius:28px;
   padding:30px 22px;
   box-shadow:0 10px 40px rgba(120,20,60,.2);
   animation:appear .7s ease;
-  position:relative;
-  z-index:2;
 }
 
 h1{
@@ -76,23 +72,28 @@ button{
   font-size:16px;
   font-weight:bold;
   cursor:pointer;
-  box-shadow:0 5px 15px rgba(200,40,90,.25);
   margin-top:10px;
-}
-
-button:active{
-  transform:scale(.96);
 }
 
 .letter{
   text-align:left;
   max-height:65vh;
   overflow-y:auto;
-  padding-right:5px;
 }
 
 .letter p{
   font-size:16px;
+}
+
+.big{
+  font-size:55px;
+  margin-bottom:15px;
+}
+
+.small{
+  font-size:14px;
+  opacity:.75;
+  margin-top:12px;
 }
 
 .heart{
@@ -126,21 +127,9 @@ button:active{
   }
 }
 
-.small{
-  font-size:14px;
-  opacity:.75;
-  margin-top:12px;
-}
-
-.big{
-  font-size:55px;
-  margin-bottom:15px;
-}
-
 @media(max-width:500px){
   .box{
     padding:25px 17px;
-    border-radius:24px;
   }
 
   h1{
@@ -164,7 +153,7 @@ button:active{
   <source src="Tum%20Prem%20Ho%20%28PenduJatt.dev%29.mp3" type="audio/mpeg">
 </audio>
 
-<!-- PAGE 1 -->
+<!-- 1 -->
 <section class="page active">
   <div class="box">
     <div class="big">🎁</div>
@@ -175,7 +164,7 @@ button:active{
   </div>
 </section>
 
-<!-- PAGE 2 -->
+<!-- 2 -->
 <section class="page">
   <div class="box">
     <h1>Happy Birthday Meri Jaan ❤️🎂</h1>
@@ -208,39 +197,30 @@ button:active{
   </div>
 </section>
 
-<!-- PAGE 3 -->
+<!-- 3 -->
 <section class="page">
   <div class="box">
     <h2>Meri Jaan... 🥹❤️</h2>
-
     <p>Tumhari smile meri favourite cheez hai.</p>
-
     <p>Tum khush hoti ho na toh pata nhi kyun mera mood bhi automatically accha ho jata hai. ❤️</p>
-
     <p>Tum mere liye sirf ek person nahi ho...</p>
-
     <p>Tum meri life ka woh part ho jise main kabhi khona nahi chahta. 🫶🏻</p>
-
     <button onclick="nextPage()">Next ❤️</button>
   </div>
 </section>
 
-<!-- PAGE 4 -->
+<!-- 4 -->
 <section class="page">
   <div class="box">
     <h2>Tumhari Khushi ❤️</h2>
-
     <p>Tumhari khushi mere liye bohot important hai.</p>
-
     <p>Chahe main tumhare paas rahu ya door...</p>
-
     <p>Bas tum hamesha smile karti rehna. 🥹❤️</p>
-
     <button onclick="nextPage()">Next ✨</button>
   </div>
 </section>
 
-<!-- PAGE 5 -->
+<!-- 5 -->
 <section class="page">
   <div class="box">
     <h2>Meri Favourite Cheezein ❤️</h2>
@@ -255,146 +235,106 @@ button:active{
   </div>
 </section>
 
-<!-- PAGE 6 -->
+<!-- 6 -->
 <section class="page">
   <div class="box">
     <h2>Ek Promise 🫶🏻</h2>
-
     <p>Promise karta hu ki chahe life mein kitni bhi problems aaye...</p>
-
     <p>Main tumhari smile ko hamesha important rakhunga.</p>
-
     <p>Har situation perfect nahi hogi, lekin meri feelings tumhare liye hamesha real rahengi. ❤️</p>
-
     <button onclick="nextPage()">Next ❤️</button>
   </div>
 </section>
 
-<!-- PAGE 7 -->
+<!-- 7 -->
 <section class="page">
   <div class="box">
     <h2>Agar Main Ek Cheez Maang Sakta... 🥺</h2>
-
     <p>Agar mujhe zindagi se ek cheez maangne ka chance mile...</p>
-
     <p>Toh main tumhari khushi maangunga.</p>
-
     <p>Kyuki tum khush ho toh meri duniya automatically beautiful lagti hai. ❤️</p>
-
     <button onclick="nextPage()">Next ✨</button>
   </div>
 </section>
 
-<!-- PAGE 8 -->
+<!-- 8 -->
 <section class="page">
   <div class="box">
     <h2>Meri Prayer For You ✨</h2>
-
     <p>Bhagwan tumhe duniya ki saari khushiyan de.</p>
-
     <p>Tumhari har wish poori ho.</p>
-
     <p>Tumhare chehre ki smile kabhi kam na ho.</p>
-
     <p>And whenever life gets difficult...</p>
-
     <p><b>Remember, your Jaggi is always there. ❤️</b></p>
-
     <button onclick="nextPage()">Next 🫶🏻</button>
   </div>
 </section>
 
-<!-- PAGE 9 -->
+<!-- 9 -->
 <section class="page">
   <div class="box">
     <h2>Ek Chhoti Si Baat... ❤️</h2>
-
     <p>Kabhi kabhi main words mein nahi bata pata...</p>
-
     <p>Lekin mere dil mein tumhare liye bohot kuch hai.</p>
-
     <p>Tum meri life ka woh beautiful chapter ho jise main kabhi end nahi karna chahta. 🥹❤️</p>
-
     <button onclick="nextPage()">Next ❤️</button>
   </div>
 </section>
 
-<!-- PAGE 10 -->
+<!-- 10 -->
 <section class="page">
   <div class="box">
     <h2>Ek Secret... 🤫❤️</h2>
-
     <p>Secret ye hai ki...</p>
-
     <p>Chahe main kitna bhi busy rahu...</p>
-
     <p>Mere mind mein kahin na kahin tum chalti rehti ho. 🥹</p>
-
     <p>You're always special to me. ❤️</p>
-
     <button onclick="nextPage()">Next 🎀</button>
   </div>
 </section>
 
-<!-- PAGE 11 -->
+<!-- 11 -->
 <section class="page">
   <div class="box">
     <h2>Meri Princess 👑❤️</h2>
-
     <p>Tum mere liye hamesha meri bacchi rahogi.</p>
-
     <p>Chahe tum kitni bhi badi ho jao...</p>
-
     <p>Mere liye tum meri princess hi rahogi. 👑🥹❤️</p>
-
     <button onclick="nextPage()">One Last Surprise 🎁</button>
   </div>
 </section>
 
-<!-- PAGE 12 -->
+<!-- 12 -->
 <section class="page">
   <div class="box">
     <div class="big">❤️</div>
-
     <h1>I Love You Bby ❤️🫶</h1>
-
     <p>Happy Birthday meri jaan.</p>
-
     <p>Happy Birthday meri pyari bacchi.</p>
-
     <p>Happy Birthday meri princess.</p>
-
     <p><b>Happy Birthday my wifey 🎀❤️</b></p>
-
     <button onclick="nextPage()">Final Surprise ✨</button>
   </div>
 </section>
 
-<!-- PAGE 13 -->
+<!-- 13 -->
 <section class="page">
   <div class="box">
     <div class="big">🎂❤️</div>
-
     <h1>My Princess ❤️</h1>
-
     <p>Bas ek cheez yaad rakhna...</p>
-
     <p><b>Jaggi loves you. ❤️</b></p>
-
     <p>Tumhari smile ke liye hamesha dua karta rahunga.</p>
-
     <p>Stay happy. Stay smiling. Always. 🥹🫶🏻</p>
-
     <p>Happy Birthday Nano Don ❤️🎂</p>
-
     <p class="small">Made with all my heart — Jaggi ❤️</p>
   </div>
 </section>
 
 <script>
-var currentPage = 0;
-var pages = document.querySelectorAll(".page");
-var heartsStarted = false;
+let currentPage = 0;
+const pages = document.querySelectorAll(".page");
+let heartsStarted = false;
 
 function showPage(number){
   if(number < 0 || number >= pages.length) return;
@@ -405,11 +345,9 @@ function showPage(number){
 }
 
 function startSurprise(){
-  var music = document.getElementById("bgMusic");
+  const music = document.getElementById("bgMusic");
 
-  music.play().catch(function(){
-    // Browser may block playback.
-  });
+  music.play().catch(function(){});
 
   showPage(1);
 
@@ -427,8 +365,8 @@ function nextPage(){
 
 function createHearts(){
   setInterval(function(){
-    var heart = document.createElement("div");
 
+    const heart = document.createElement("div");
     heart.className = "heart";
     heart.innerHTML = Math.random() > 0.5 ? "❤️" : "💗";
 
