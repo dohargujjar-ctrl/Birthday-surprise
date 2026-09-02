@@ -3,172 +3,214 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Happy Birthday Meri Jaan ❤️</title>
+<title>For My Princess ❤️</title>
 
 <style>
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 html,body{
-  margin:0;
-  padding:0;
-  width:100%;
-  height:100%;
+    margin:0;
+    padding:0;
+    width:100%;
+    min-height:100%;
 }
 
 body{
-  font-family:Georgia,serif;
-  background:linear-gradient(135deg,#ffd6e0,#f7a8bd);
-  color:#5b1830;
-  overflow:hidden;
+    font-family:Georgia,"Times New Roman",serif;
+    background:linear-gradient(135deg,#ffdce5,#f7a1b8);
+    color:#57182e;
+    overflow:hidden;
 }
 
+/* background hearts */
+.bg-heart{
+    position:fixed;
+    bottom:-50px;
+    font-size:22px;
+    opacity:.8;
+    pointer-events:none;
+    animation:rise 7s linear forwards;
+    z-index:1;
+}
+
+@keyframes rise{
+    0%{
+        transform:translateY(0) rotate(0);
+        opacity:0;
+    }
+    10%{opacity:.8}
+    100%{
+        transform:translateY(-115vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* pages */
 .page{
-  display:none;
-  width:100%;
-  height:100vh;
-  min-height:100vh;
-  align-items:center;
-  justify-content:center;
-  padding:18px;
+    position:absolute;
+    inset:0;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:16px;
+    z-index:2;
 }
 
 .page.active{
-  display:flex;
+    display:flex;
 }
 
+/* card */
 .card{
-  width:100%;
-  max-width:680px;
-  max-height:92vh;
-  overflow-y:auto;
-  padding:28px 22px;
-  background:rgba(255,255,255,0.94);
-  border-radius:28px;
-  text-align:center;
-  box-shadow:0 12px 40px rgba(90,20,50,0.25);
+    width:min(94vw,680px);
+    max-height:92vh;
+    overflow-y:auto;
+    padding:28px 22px;
+    background:rgba(255,255,255,.94);
+    border-radius:28px;
+    box-shadow:0 18px 55px rgba(92,20,48,.25);
+    text-align:center;
+    animation:cardIn .65s ease;
+}
+
+@keyframes cardIn{
+    from{
+        opacity:0;
+        transform:translateY(25px) scale(.96);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
 }
 
 h1{
-  color:#d6336c;
-  font-size:30px;
-  margin:5px 0 18px;
+    margin:0 0 18px;
+    color:#d6336c;
+    font-size:30px;
 }
 
 h2{
-  color:#c2255c;
+    color:#c2255c;
 }
 
 p{
-  font-size:18px;
-  line-height:1.8;
-}
-
-.letter{
-  text-align:left;
-}
-
-.letter p{
-  margin-bottom:20px;
+    font-size:18px;
+    line-height:1.8;
+    margin:12px 0;
 }
 
 .big{
-  font-size:21px;
-  line-height:1.9;
+    font-size:21px;
+    line-height:1.9;
+}
+
+.letter{
+    text-align:left;
+}
+
+.letter p{
+    margin-bottom:22px;
 }
 
 .shayari{
-  font-size:20px;
-  line-height:2;
-  font-style:italic;
+    font-size:21px;
+    line-height:2;
+    font-style:italic;
 }
 
 button{
-  border:0;
-  background:#d6336c;
-  color:white;
-  padding:14px 25px;
-  border-radius:30px;
-  font-size:17px;
-  margin-top:15px;
+    border:0;
+    outline:0;
+    padding:14px 26px;
+    margin-top:18px;
+    border-radius:30px;
+    background:#d6336c;
+    color:white;
+    font-size:17px;
+    font-family:Georgia,serif;
+    box-shadow:0 8px 22px rgba(214,51,108,.28);
 }
 
-.heart{
-  position:fixed;
-  bottom:-40px;
-  z-index:20;
-  pointer-events:none;
-  animation:up 6s linear forwards;
+button:active{
+    transform:scale(.95);
 }
 
-@keyframes up{
-  0%{
-    transform:translateY(0) rotate(0deg);
-    opacity:1;
-  }
-  100%{
-    transform:translateY(-115vh) rotate(360deg);
-    opacity:0;
-  }
+.small{
+    font-size:15px;
+    opacity:.7;
 }
 
-.card{
-  animation:appear .7s ease;
+.crown{
+    font-size:55px;
+    margin-bottom:5px;
 }
 
-@keyframes appear{
-  from{
-    opacity:0;
-    transform:scale(.94);
-  }
-  to{
-    opacity:1;
-    transform:scale(1);
-  }
+.final-heart{
+    font-size:55px;
+    animation:beat 1.1s infinite;
+}
+
+@keyframes beat{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.18)}
+}
+
+/* scrollbar */
+.card::-webkit-scrollbar{
+    width:5px;
+}
+
+.card::-webkit-scrollbar-thumb{
+    background:#e88ba5;
+    border-radius:10px;
 }
 </style>
 </head>
 
 <body>
 
-<audio id="music" loop>
-<source src="Tum%20Prem%20Ho%20%28PenduJatt.dev%29.mp3" type="audio/mpeg">
+<!-- MUSIC -->
+<audio id="music" loop preload="auto">
+    <source src="Tum%20Prem%20Ho%20%28PenduJatt.dev%29.mp3" type="audio/mpeg">
 </audio>
 
 
-<!-- 1 -->
-<div class="page active">
+<!-- PAGE 1 -->
+<section class="page active">
 <div class="card">
+
+<div class="crown">🎀</div>
 
 <h1>Hey Nano Don ❤️</h1>
 
 <p class="big">
-Aaj tumhare liye kuch special hai... 🥹❤️
+Aaj tumhare liye kuch special hai... 🥹
 </p>
 
 <p>
 Ek-ek karke surprise unlock karna.
 </p>
 
-<button onclick="start()">Open My Surprise 🎁</button>
+<button onclick="begin()">Open My Surprise 🎁</button>
+
+<p class="small">
+Made specially for my Princess ❤️
+</p>
 
 </div>
-</div>
+</section>
 
 
-<!-- 2 FULL LETTER -->
-<div class="page">
+<!-- PAGE 2 -->
+<section class="page">
 <div class="card">
 
 <h1>Happy Birthday Meri Jaan ❤️🎂</h1>
 
 <div class="letter">
 
-<p>
-Happy Birthday meri jaan ❤️🎂
-</p>
+<p>Happy Birthday meri jaan ❤️🎂</p>
 
 <p>
 Aaj ka din mere liye itna special hai ki tum soch bhi nhi skti kyuki aaj he ek pari ne iss earth per apne pair rkhe te or vo apne sath bohot sari khushiyan leker aayi thi.....or jb se aap meri life me aayi ho meri life ko itna haseen bna diya hai aapne ...mujheTumse baat karna, tumhara naraz hona, tumhara mujhe manana, tumhari chhoti-chhoti baatein, tumhari smile…sab kuch mujhe bohot aacha lgta hai.....Aur kabhi koi achhi cheez ya kuch bhi hota hai toh automatically man krta hai ki ye sabse pehle tumhe btau❤️.....
@@ -205,11 +247,11 @@ aur kbhi ye mat sochna ki tum aam ho Tum meri jaan ho meri life ho tum ❤️...
 <button onclick="next()">Next Surprise ❤️</button>
 
 </div>
-</div>
+</section>
 
 
-<!-- 3 -->
-<div class="page">
+<!-- PAGE 3 -->
+<section class="page">
 <div class="card">
 
 <h1>Meri Jaan... 🥹❤️</h1>
@@ -230,11 +272,11 @@ tum meri life ka woh part ho jise main kabhi khona nahi chahta. 🫶🏻
 <button onclick="next()">Next ❤️</button>
 
 </div>
-</div>
+</section>
 
 
-<!-- 4 -->
-<div class="page">
+<!-- PAGE 4 -->
+<section class="page">
 <div class="card">
 
 <h1>Meri Favourite Cheezein ❤️</h1>
@@ -246,17 +288,17 @@ tum meri life ka woh part ho jise main kabhi khona nahi chahta. 🫶🏻
 <p>🎀 Tumhara cute sa gussa</p>
 
 <p class="big">
-👑 Aur sabse zyada... <b>TUM</b>
+Aur sabse zyada... <b>TUM</b> 👑
 </p>
 
 <button onclick="next()">Aur ek surprise 🎁</button>
 
 </div>
-</div>
+</section>
 
 
-<!-- 5 -->
-<div class="page">
+<!-- PAGE 5 -->
+<section class="page">
 <div class="card">
 
 <h1>Ek Promise 🫶🏻</h1>
@@ -278,11 +320,11 @@ bas yaad rakhna...
 <button onclick="next()">Next Surprise ✨</button>
 
 </div>
-</div>
+</section>
 
 
-<!-- 6 -->
-<div class="page">
+<!-- PAGE 6 -->
+<section class="page">
 <div class="card">
 
 <h1>Agar Main Ek Cheez Maang Sakta... ❤️</h1>
@@ -301,11 +343,11 @@ toh sirf khushi ke. 🥹❤️
 <button onclick="next()">Next ❤️</button>
 
 </div>
-</div>
+</section>
 
 
-<!-- 7 -->
-<div class="page">
+<!-- PAGE 7 -->
+<section class="page">
 <div class="card">
 
 <h1>Ek Chhoti Si Baat... 🥺</h1>
@@ -328,11 +370,37 @@ mere liye special ban jaati hai. 🫶🏻
 <button onclick="next()">Aage Chalo 🎀</button>
 
 </div>
+</section>
+
+
+<!-- PAGE 8 -->
+<section class="page">
+<div class="card">
+
+<h1>Ek Aur Secret... 🤫❤️</h1>
+
+<p class="big">
+Tumhe shayad pata bhi nahi...
+</p>
+
+<p>
+Lekin tum meri daily life ka woh hissa ban chuki ho
+jiske bina din thoda incomplete sa lagta hai. 🥹
+</p>
+
+<p>
+Tumhari ek chhoti si baat bhi
+mere face par smile la sakti hai. ❤️
+</p>
+
+<button onclick="next()">Secret Ke Baad... ✨</button>
+
 </div>
+</section>
 
 
-<!-- 8 SHAYARI -->
-<div class="page">
+<!-- PAGE 9 -->
+<section class="page">
 <div class="card">
 
 <h1>Sirf Tumhare Liye... 🌙❤️</h1>
@@ -351,11 +419,11 @@ kyuki tumse hi toh meri duniya haseen lagti hai. 🎀❤️
 <button onclick="next()">Next Surprise ✨</button>
 
 </div>
-</div>
+</section>
 
 
-<!-- 9 -->
-<div class="page">
+<!-- PAGE 10 -->
+<section class="page">
 <div class="card">
 
 <h1>My Princess 👑</h1>
@@ -366,8 +434,8 @@ lekin mere liye tum har din special ho. ❤️
 </p>
 
 <p>
-Tum meri bacchi ho,
-meri princess ho,
+Tum meri bacchi ho,<br>
+meri princess ho,<br>
 meri jaan ho. 🎀
 </p>
 
@@ -378,11 +446,11 @@ Aur mere liye tum hamesha meri cute si princess rahogi. 🥹❤️
 <button onclick="next()">One More ❤️</button>
 
 </div>
-</div>
+</section>
 
 
-<!-- 10 -->
-<div class="page">
+<!-- PAGE 11 -->
+<section class="page">
 <div class="card">
 
 <h1>I Love You Bby ❤️🫶</h1>
@@ -396,7 +464,7 @@ Lekin mere dil mein tumhare liye jo feelings hain,
 woh mere liye bohot real hain. ❤️
 </p>
 
-<p>
+<p class="big">
 Tum meri jaan ho.<br>
 Tum meri life ho.<br>
 Tum meri princess ho. 👑
@@ -405,12 +473,14 @@ Tum meri princess ho. 👑
 <button onclick="next()">Final Surprise 🥹</button>
 
 </div>
-</div>
+</section>
 
 
-<!-- 11 FINAL -->
-<div class="page">
+<!-- FINAL PAGE -->
+<section class="page">
 <div class="card">
+
+<div class="final-heart">❤️</div>
 
 <h1>My Princess 👑</h1>
 
@@ -425,7 +495,7 @@ Aaj ka din sirf tumhara hai.
 </p>
 
 <p class="big">
-Hamesha khush rehna,
+Hamesha khush rehna,<br>
 hamesha smile karna. 🫶🏻
 </p>
 
@@ -446,86 +516,110 @@ Forever & Always ❤️
 </p>
 
 </div>
-</div>
+</section>
 
 
 <script>
 
-var pages = document.getElementsByClassName("page");
-var current = 0;
-
+var currentPage = 0;
+var pages = document.querySelectorAll(".page");
 var music = document.getElementById("music");
 
-function start(){
+function showPage(number){
 
-  music.play();
+    if(number < 0 || number >= pages.length){
+        return;
+    }
 
-  try{
-    music.currentTime = 16;
-  }catch(e){}
+    for(var i=0;i<pages.length;i++){
+        pages[i].classList.remove("active");
+    }
 
-  hearts();
+    pages[number].classList.add("active");
+    currentPage = number;
+}
 
-  current = 1;
-  show();
+function begin(){
 
+    /* Mobile browsers allow music after button tap */
+    if(music){
+        music.play().catch(function(){});
+    }
+
+    createHearts();
+
+    showPage(1);
 }
 
 function next(){
 
-  if(current < pages.length - 1){
+    if(currentPage < pages.length - 1){
 
-    current++;
+        currentPage = currentPage + 1;
 
-    show();
+        showPage(currentPage);
 
-    hearts();
-
-  }
-
-}
-
-function show(){
-
-  for(var i=0;i<pages.length;i++){
-    pages[i].className = "page";
-  }
-
-  pages[current].className = "page active";
+        createHearts();
+    }
 
 }
 
-function hearts(){
+function createHearts(){
 
-  for(var i=0;i<10;i++){
+    var emojis = [
+        "❤️",
+        "💕",
+        "💖",
+        "💗",
+        "🎀",
+        "✨",
+        "🫶🏻"
+    ];
 
-    var h = document.createElement("div");
+    for(var i=0;i<9;i++){
 
-    h.className = "heart";
+        var heart = document.createElement("div");
 
-    var list = ["❤️","💕","💖","💗","🫶🏻","🎀","✨"];
+        heart.className = "bg-heart";
 
-    h.innerHTML = list[Math.floor(Math.random()*list.length)];
+        heart.innerHTML =
+            emojis[Math.floor(Math.random()*emojis.length)];
 
-    h.style.left = Math.random()*100 + "vw";
+        heart.style.left =
+            Math.floor(Math.random()*100) + "vw";
 
-    h.style.fontSize = (18 + Math.random()*25) + "px";
+        heart.style.fontSize =
+            (18 + Math.floor(Math.random()*22)) + "px";
 
-    h.style.animationDuration = (4 + Math.random()*3) + "s";
+        heart.style.animationDuration =
+            (5 + Math.floor(Math.random()*4)) + "s";
 
-    document.body.appendChild(h);
+        document.body.appendChild(heart);
 
-    setTimeout(function(){
+        setTimeout(function(h){
 
-      if(h.parentNode){
-        h.parentNode.removeChild(h);
-      }
+            return function(){
 
-    },7000);
+                if(h && h.parentNode){
+                    h.parentNode.removeChild(h);
+                }
 
-  }
+            };
 
+        }(heart),9000);
+    }
 }
+
+/* small background heart effect */
+setInterval(function(){
+
+    if(document.hidden){
+        return;
+    }
+
+    createHearts();
+
+},9000);
 
 </script>
 
