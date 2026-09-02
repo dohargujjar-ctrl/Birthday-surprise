@@ -249,7 +249,6 @@ button:active{
     <p>✨ Tumhara mujhe chidhana</p>
     <p>✨ Tumhara naraz hona</p>
     <p>✨ Tumhara mujhe manana</p>
-    <p>✨ Tumse late-night baatein</p>
     <p>✨ Aur sabse zyada... <b>TUM</b> ❤️</p>
 
     <button onclick="nextPage()">Next 🥹</button>
@@ -395,8 +394,11 @@ button:active{
 <script>
 var currentPage = 0;
 var pages = document.querySelectorAll(".page");
+var heartsStarted = false;
 
 function showPage(number){
+  if(number < 0 || number >= pages.length) return;
+
   pages[currentPage].classList.remove("active");
   currentPage = number;
   pages[currentPage].classList.add("active");
@@ -406,11 +408,15 @@ function startSurprise(){
   var music = document.getElementById("bgMusic");
 
   music.play().catch(function(){
-    // Browser may block autoplay until another tap.
+    // Browser may block playback.
   });
 
   showPage(1);
-  createHearts();
+
+  if(!heartsStarted){
+    heartsStarted = true;
+    createHearts();
+  }
 }
 
 function nextPage(){
@@ -422,8 +428,9 @@ function nextPage(){
 function createHearts(){
   setInterval(function(){
     var heart = document.createElement("div");
+
     heart.className = "heart";
-    heart.innerHTML = Math.random() > .5 ? "❤️" : "💗";
+    heart.innerHTML = Math.random() > 0.5 ? "❤️" : "💗";
 
     heart.style.left = Math.random() * 100 + "vw";
     heart.style.fontSize = (15 + Math.random() * 20) + "px";
@@ -434,6 +441,7 @@ function createHearts(){
     setTimeout(function(){
       heart.remove();
     },8000);
+
   },700);
 }
 </script>
